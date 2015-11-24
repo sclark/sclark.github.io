@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <meta name="description" content="Stephen Clark is a young developer who loves snowboarding, puzzles, and of course programming.">
+        <meta name="author" content="Stephen Clark">
+        <title>Stephen Clark</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Montserrat:400,700">
+        <link rel="icon" href="media/favicon.ico" type="image/x-icon">
+        <script type="text/javascript">
+
+            function days_until(date) {
+                var mspd = 1000*60*60*24;
+                var today = new Date();
+                return Math.floor((date.getTime()-today.getTime())/mspd);
+            }
+
+            function get_next_date(day, month) {
+                var today = new Date();
+                var date = new Date(today.getFullYear(), month-1, day);
+                if (today.getMonth() >= month-1 && today.getDate() > day)
+                    date.setFullYear(date.getFullYear()+1)
+                return date;
+            }
+
+            function check_holidays() {
+                var NAME = 0;
+                var DATE = 1;
+                var holidays = [
+                    ["holidays", get_next_date(25, 12)],
+                    ["halloween", get_next_date(31, 10)],
+                    ["new_years", get_next_date(1, 1)],
+                    ["birthday", get_next_date(31, 1)]
+                ];
+
+                for (var i = 0; i < holidays.length; i++) {
+                    var days = days_until(holidays[i][DATE]);
+                    if (days >= 0 && days <= 7) {
+                        setup_holiday(holidays[i][NAME]);
+                    }
+                }
+            }
+
+            function setup_holiday(name) {
+                document.getElementById("me").src = "media/holidays/me_"+name+".gif";
+                document.getElementById("feature").src = "media/holidays/feature_"+name+".gif";
+                document.getElementById("feature").style.display = "block";
+                /*if (confirm("Allow "+name+" background music to play?")) {
+                    var audio = new Audio("media/holidays/"+name+".mp3");
+                    audio.volume = 0.2;
+                    audio.play();
+                }*/
+            }
+
+            window.addEventListener("load", check_holidays);
+        </script>
+    </head>
+    <body>
+        <div class="fixed on-top">
+            <div id="header">
+                <div class="left" id="name">
+                    <a href=".">Stephen Clark</a>
+                </div>
+                <div class="right" id="nav">
+                    <a href="#experience">experience</a>
+                    <a href="#projects">projects</a>
+                    <a href="Stephen%20Clark.pdf">resume</a>
+                </div>
+            </div>
+        </div>
+        <div id="main">
+            <div id="content">
+                <div class="container">
+                <img id="me" src="media/me.jpg" alt="Stephen Clark">
+                Hi! I'm Stephen, an 18 year old African-American young man who stands just over six feet tall. <a href="http://sclark.io/jokes">I'm funny</a>, but for the record, I can't sing, dance, or even play basketball. Instead, I'm skilled in developing solutions to challenging problems and am studying at the Carnegie Mellon School of Computer Science. Check me out below.
+                </div>
+                <div class="container">
+                    <div class="boxes" id="boxes">
+                        <div class="label">Experience<span class="a" id="experience"></span></div>
+                        <div class="tape">
+                            <div class="box">
+                                <h2>San Diego Supercomputer Center</h2>
+                                <div class="padded gray container">
+                                I worked as a research intern to create a benchmark for AMBER Molecular Dynamics Quantum Mechanical and Molecular Mechanical simulations. I also extended AMBER functionality in FORTRAN to use external QChem calculations.
+                                <a href="http://www.sdsc.edu/" target="_blank">
+                                    <img class="sm img" alt="Stephen's Presentation" title="&copy; University California San Diego Supercomputer Center" src="media/sdsc.png">
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tape">
+                            <div class="box">
+                                <h2>Measurabl - Sustainability Simplified</h2>
+                                <div class="padded gray container">
+                                I worked as a software development intern to create internal tools to automate tedious processes. I also developed weather normalization regression models implemented in the Measurabl web app.
+                                <a href="http://measurabl.com" target="_blank">
+                                    <img class="sm img" alt="Measurabl Logo" title="&copy; Measurabl, Inc." src="media/measurabl.jpg">
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="label">Projects<span class="a" id="projects"></span></div>
+                        <div class="tape">
+                            <div class="box">
+                                <h2>CMU Beep Boop</h2>
+                                <div class="padded gray container">
+                                The most difficult thing at CMU is not the classes...it's waiting to cross at the Forbes and Morewood crosswalk. So, at TartanHacks, a team of us set out to solve this problem by creating an app that would tell users to walk faster or slower to arrive at the cross walk exactly on time.
+                                <a href="http://CanICrossForbesAndMorewood.com" target="_blank">
+                                    <img class="sm img" alt="CMU Beep Boop logo" title="&copy; CMU Beep Boop" src="media/beepboop.png">
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tape">
+                            <div class="box">
+                                <h2>Grocery Guru</h2>
+                                <div class="padded gray container">
+                                This application was designed and developed as a result of a 24 hour CodeDay competition. It was an attempt at addressing some of the basic budget and dietary issues facing many Americans today: waste, costs, and unhealthy food choice.
+                                <iframe class="lg img" src="https://www.youtube.com/embed/Ift6pi-YAlA?rel=0&controls=0&showinfo=0" allowfullscreen=""></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tape">
+                            <div class="box">
+                                <h2>StephenMatrix</h2>
+                                <div class="padded gray container">
+                                StephenMatrix is an online matrix math calculator based on my Java fastMatrix library. This online calculator makes it easy to do successive complex matrix operations. StephenMatrix is also a matBASIC interpreter, a language similar to BAISC tailored to matrix math.
+                                <a href="http://stephen.clarkscode.com/projs/StephenMatrix" target="_blank">
+                                    <img class="sm img" alt="StephenMatrix Logo" title="&copy; CaliforniaClarks" src="media/stephenmatrix.png">
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tape">
+                            <div class="box">
+                                <h2>Aquarium</h2>
+                                <div class="padded gray container">
+                                This was my first programming project. Although simple, I created an interactive wallpaper with five tropical fish that encourages users to create a unique aquarium environment. To this day, I still use this app as the wallpaper on my phone.
+                                <a href="http://play.google.com/store/apps/details?id=com.californiaclarks.stephen.aquarium" target="_blank">
+                                    <img class="sm img" alt="Aquarium Logo" title="&copy; CaliforniaClarks" src="media/aquarium.png">
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tape">
+                            <div class="box">
+                                <h2>Binary Counter</h2>
+                                <div class="padded gray container">
+                                Using a Raspberry PI microcontroller device along with 7-segment displays and a battery source, I created a binary counting system that allowed users to visually grasp and understand the relationship between the binary and decimal systems.
+                                <img class="med img" alt="Binary Counter Picture" title="Binary Counter" src="media/binary.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tape">
+                            <div class="box">
+                                <h2>Additional Projects</h2>
+                                <div class="padded gray container">
+                                These projects represent some of my programs I developed during my free time and that I ported to run on the web. I also have a small collection of web experiments as a result of one day challenges I commit myself to.
+                                <ul>
+                                    <li><a href="http://sclark.io/disco-calc">Disco Calc</a> - wow amaze, such disco</li>
+                                    <li><a href="http://sclark.io/jokes">Stephen's Jokes</a> - a joke database</li>
+                                    <li><a href="http://stephen.clarkscode.com/exps/dragon-clock.html">Dragon Clock</a> - dragon curve clock</li>
+                                    <li><a href="http://stephen.clarkscode.com/ls.php?dir=exps">Experiments</a> - daily challenges</li>
+                                    <li><a href="http://stephen.clarkscode.com/ls.php?dir=archive">Archive</a> - old embarrassing projects</li><li><a href="http://californiaclarks.com">CaliforniaClarks.com</a> - family website</li>
+                                </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fixed on-bottom">
+            <div id="footer">
+                <span class="left">
+                    <img id="feature" src="">
+                </span>
+                <div class="right">
+                    <a href="https://github.com/sclark" target="_blank">github</a>
+                    <a href="https://linkedin.com/in/sclarkio" target="_blank">linkedin</a>
+                    <a href="http://californiaclarks.com?a=stephen" target="_blank">blog</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
