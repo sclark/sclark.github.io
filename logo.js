@@ -7,7 +7,7 @@ function sclark() {
 					  top: 1em; \
 					  right: 1em; \
 					  z-index: 999; \
-					  content: url('http://i.imgur.com/pfG6loE.png'); \
+					  content: url('http://sclark.io/media/logo.png'); \
 					  width: 45px; \
 					  height: 45px; \
 					  border-radius: 50%; \
