@@ -10,19 +10,19 @@ function sclark() {
 					  content: url('http://sclark.io/media/logo.png'); \
 					  width: 45px; \
 					  height: 45px; \
-					  border-radius: 50%; \
+					  border-radius: 10%; \
 					  border-style: none; \
 					  transition: border-radius 0.2s ease-in-out; \
-					  animation: 5s spin infinite linear; \
+					  animation: 0; \
 					}", 0);
 	sheet.insertRule("#sclark:hover { \
-					  border-radius: 10%; \
-					  animation: 0; \
+					  border-radius: 50%; \
+					  animation: 1s spin infinite linear; \
 					}", 0);
 
 	sheet.insertRule("@keyframes spin { \
-					  90% { transform: rotate(0deg); } \
-					  100% { transform: rotate(-360deg); } \
+					  0% { transform: rotate(0deg); } \
+					  100% { transform: rotate(360deg); } \
 					}", 0);
 
 
