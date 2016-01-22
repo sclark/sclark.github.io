@@ -43,14 +43,7 @@
             }
 
             function setup_holiday(name) {
-                document.getElementById("me").src = "media/holidays/me_"+name+".gif";
-                document.getElementById("feature").src = "media/holidays/feature_"+name+".gif";
-                document.getElementById("feature").style.display = "block";
-                /*if (confirm("Allow "+name+" background music to play?")) {
-                    var audio = new Audio("media/holidays/"+name+".mp3");
-                    audio.volume = 0.2;
-                    audio.play();
-                }*/
+                document.getElementById("me").src = "media/me_"+name+".gif";
             }
 
             window.addEventListener("load", check_holidays);
