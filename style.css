@@ -1,5 +1,6 @@
-/* reset */
-body{
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+body {
     background-color: #999;
     font-family: Montserrat, Arial;
     margin:0;
@@ -11,7 +12,7 @@ a, img, div {
     text-decoration:none;
 }
 h1, h2, h3 {
-    font-weight: normal;
+    font-weight: inherit;
     margin-top: 0;
     margin-bottom: 10px;
 }
@@ -131,7 +132,7 @@ iframe {
     white-space: normal;
     display: inline-block;
     vertical-align: top;
-    width: 50%;
+    width: 100%;
 }
 .box {
     padding: 10px;
@@ -178,6 +179,13 @@ iframe {
     max-width: 300px;
     max-height: 300px;
 }
+.clear {
+  clear: both;
+  font-style: bold;
+}
+.half {
+  width: 50%;
+}
 .left {
     float:left;
 }
@@ -185,19 +193,35 @@ iframe {
     float:right;
 }
 
+.video {
+    height: 150px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    line-height: 150px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 75px;
+    border-radius: 10px;
+}
+
+.icon {
+    display: inline-block;
+    max-width: 75px;
+    max-height: 75px;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 750px) {
-  body {
-    padding: 0;
-  }
-  #header, #main, #footer {
-    max-width: 500px;
-    min-width: 350px;
-    margin: 0 auto;
-  }
-  #nav a:not(:last-child) {
-    display: none;
-  }
-  .tape {
-    width: 100%;
-  }
+    #header, #main, #footer {
+      max-width: 500px;
+      min-width: 350px;
+      margin: 0 auto;
+    }
+    #nav a:not(:last-child) {
+      display: none;
+    }
+    .half {
+      width: 100%;
+    }
 }
