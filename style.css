@@ -2,7 +2,7 @@
 
 body {
     background-color: #999;
-    font-family: Montserrat, Arial;
+    font-family: Montserrat, Arial, sans-serif;
     margin:0;
     padding: 0;
 }
@@ -49,6 +49,7 @@ iframe {
     padding:0;
     font-size: 22px;
     overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0,0,0,.33);
 }
 #header a {
     display: inline-block;
@@ -86,6 +87,7 @@ iframe {
     max-width:1000px;
     min-width:700px;
     overflow: hidden;
+    box-shadow: 0 -5px 10px rgba(0,0,0,.33);
 }
 #footer a, span {
     color:#FFF;
