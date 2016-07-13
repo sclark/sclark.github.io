@@ -1,9 +1,14 @@
 var express = require('express');
-var router = express.Router();
+var mongoose = require('mongoose');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+var router = express.Router();
+var Info = mongoose.model('Info');
+
+router.get('/dump', function(req, res, next) {
+  Info.find({}).exec(function(err, doc) {
+    if (err) return console.error(err);
+    res.render('index', { docs: doc });
+  });
 });
 
 module.exports = router;
