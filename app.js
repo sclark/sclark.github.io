@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
 mongoose.model('Info', require('./models/info'), 'info');
-mongoose.connect(process.env.OPENSHIFT_MONGODB_DB_URL || 'mongodb://localhost/sclarkio');
+mongoose.connect(process.env.OPENSHIFT_MONGODB_DB_URL+process.env.OPENSHIFT_APP_NAME || 'mongodb://localhost/sclarkio');
 
 var app = express();
 app.set('views', path.join(__dirname, 'views'));

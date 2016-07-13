@@ -1,25 +1,18 @@
 #!/usr/bin/env node
-var app = require('../app');
-var debug = require('debug')('sclark.io:server');
+var app = require('./app');
+var debug = require('debug')('sclarkio:server');
 var http = require('http');
 
-// normalize a port into a number, string, or false
-function normalizePort(val) {
-  var port = parseInt(val, 10);
-  if (isNaN(port)) return val; // named pipe
-  if (port >= 0) return port; // port number
-  return false;
-}
-
-var port = normalizePort(process.env.PORT || '3000');
-app.set('port', port);
+app.set('port', process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 3000);
+app.set('ip', process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1');
 
 var server = http.createServer(app);
-server.listen(port);
+server.listen(app.get('port') ,app.get('ip'));
 
 server.on('error', function(error) {
   if (error.syscall !== 'listen') throw error;
 
+  var port = app.get('port');
   var bind = typeof port === 'string' ? 'Pipe '+port : 'Port '+port;
   if (error.code === "EACCES") console.error(bind + ' requires elevated privileges');
   else if (error.code === "EADDRINUSE") console.error(bind + ' is already in use');

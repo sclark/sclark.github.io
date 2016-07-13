@@ -1,9 +1,9 @@
 {
-  "name": "sclark.io",
+  "name": "sclarkio",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node server.js"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
