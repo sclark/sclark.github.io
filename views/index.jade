@@ -1,8 +1,19 @@
-doctype html
-html
-  head
-    title= title
-    link(rel='stylesheet', href='style.css')
-  body
-    for doc in docs
-      span= doc
+extends layout
+
+block content
+  header
+    .img
+      img(src='media/me.jpg')
+    .info
+      h1 Stephen Clark
+      h2 Student at Carnegie Mellon University
+  nav
+    .tab#default Projects
+    .tab Experience
+    .tab Resume
+  main.cards
+    for card in cards
+      a(href=card.href, data-type=card.category)
+        h3= card.title
+        div(data-src=card.img)
+          p= card.info
