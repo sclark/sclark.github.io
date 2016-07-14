@@ -5,12 +5,38 @@
 }
 
 body {
-  background: #dee1ec;
+  background: #dce1df;
   font-family: Roboto, Arial, sans-serif;
   max-width: 1200px;
   margin: 0 auto;
   font-size: 16px;
 }
+
+
+/* global styles */
+
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+  padding-bottom: 0.5em;
+}
+
+a,
+a:link,
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+
+/* header style */
 
 header {
   position: relative;
@@ -27,7 +53,7 @@ header:after {
 
 header > .img {
   float: left;
-  background-color: #547088;
+  background-color: #90b5d2;
   padding: 0.25em;
   border-radius: 0.25em;
   margin-right: 1em;
@@ -43,35 +69,18 @@ header > .img > img {
 
 header > .info {
   position: absolute;
-  bottom: 2em; /* TODO: Calculated from paddings. */
+  bottom: 2em;
   left: 12.5em;
 }
 
-h1 {
-  font-size: 4em;
-}
 
-h2 {
-  font-size: 2em;
-}
-
-h3 {
-  font-size: 1.5em;
-}
+/* nav style */
 
 nav {
   padding: 0 1em;
-  background-color: #97a5bf;
-}
-a {
-  color: black;
-}
-a:link {
-    text-decoration: none;
-}
-
-a:visited {
-    text-decoration: none;
+  background-color: #90b5d2;
+  border-radius: 0.25em;
+  margin-bottom: 1em;
 }
 
 .tab {
@@ -81,6 +90,8 @@ a:visited {
   cursor: pointer;
   padding: 0.5em;
 }
+
+/* main (grid) style */
 
 main {
   position: relative;
@@ -94,15 +105,27 @@ main > a {
   position: relative;
 }
 
-main > a > div {
+main > a > .container {
+  background: #90b5d2;
+  padding: 1em;
+  border-radius: 0.25em;
+}
+
+main > a > div > div {
   height: 0;
   padding: 0;
-  padding-bottom: calc(56.25%);
+  padding-bottom: calc(60%);
   position: relative;
 }
 
-main > a > div > p {
-  padding: 0.5em;
+[data-src] {
+  background-color: #90b5d2;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+main > a > div > div > p {
   font-size: 1.25em;
   line-height: 1.33;
   position: absolute;
@@ -111,25 +134,30 @@ main > a > div > p {
   right: 0;
   bottom: 0;
   opacity: 0;
-  transition: opacity 0.15s linear, background-color 0.15s linear;
+  transition: opacity 0.1s linear, background-color 0.1s linear;
   color: black;
   font-weight: bold;
   text-align: justify;
 }
 
-main > a > div > p:hover {
-  background-color: rgba(255,255,255,0.9);
+main > a > div > div > p:hover {
+  background-color: rgba(144, 181, 210, 0.9);
   opacity: 1;
 }
 
-[data-src] {
-  background-color: white;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
 
-@media screen and (max-width: 800px) {
+/* mobile style */
+
+@media screen and (max-width: 1000px) {
+
+  /* global style */
+
+  h1, h2 {
+    text-align: center;
+  }
+
+
+  /* header style */
 
   header > .img {
     float: none;
@@ -145,12 +173,12 @@ main > a > div > p:hover {
     position: initial;
   }
 
-  h1, h2 {
-    text-align: center;
-  }
+
+  /* nav style */
 
   nav {
     display: flex;
+    border-radius: 0;
   }
 
   .tab {
@@ -159,5 +187,24 @@ main > a > div > p:hover {
 
   .tab:not(:first-child):not(:last-child) {
     border-left: 1px solid black;
+    border-right: 1px solid black;
   }
+
+
+  /* main style */
+
+  main > a {
+    flex-basis: calc(100% / 2);
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  /* main style */
+
+  main > a {
+    flex-basis: calc(100% / 1);
+  }
+
 }

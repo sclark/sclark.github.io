@@ -14,6 +14,7 @@ block content
   main.cards
     for card in cards
       a(href=card.href, data-type=card.category)
-        h3= card.title
-        div(data-src=card.img)
-          p= card.info
+        .container
+          h3= card.title
+          div(data-src=card.img)
+            p= card.info
