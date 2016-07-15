@@ -1,0 +1,2 @@
+echo "Maintanance page stopping"
+kill -9 `cat ${OPENSHIFT_TMP_DIR}/maintenance.pid`
