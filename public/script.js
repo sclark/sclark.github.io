@@ -31,7 +31,6 @@ window.addEventListener('load', function() {
 });
 
 
-
 /* .video background-image fix until attr(data-image url) is supported */
 window.addEventListener('load', function() {
   var xs = document.getElementsByTagName('*');

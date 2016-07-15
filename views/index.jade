@@ -1,20 +1,29 @@
 extends layout
 
 block content
-  header
-    .img
-      img(src='media/me.jpg')
-    .info
-      h1 Stephen Clark
-      h2 Student at Carnegie Mellon University
-  nav
-    .tab#default Projects
-    .tab Experience
-    .tab Resume
-  main.cards
+  .cover-photo
+  .container
+    .header
+      .img
+        img(src='media/me.jpg')
+      .wrapper
+        .name
+          h1 Stephen Clark
+          h2 Student at Carnegie Mellon University
+        .intro
+          p
+            | I'm a young, aspiring developer just over six feet tall. While I can't sing or dance I do consider myself very skilled in developing solutions for solving challenging problems.
+  .container.tabs
+    #default.tab.active Projects
+    .tab.middle Experience
+    .tab(data-href='sclark.pdf') Resume
+  .container.cards.active
     for card in cards
-      a(href=card.href, data-type=card.category)
-        .container
+      div(data-type=card.category)
+        img(src=card.img)
+        a(href=card.href)
           h3= card.title
-          div(data-src=card.img)
-            p= card.info
+        p= card.info
+  .container
+    .footer
+      p That's it...but why don't you email me?
