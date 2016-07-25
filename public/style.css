@@ -8,25 +8,25 @@ body {
   background: #dee1ec;
   font-family: Roboto, Arial, sans-serif;
   font-size: 20px;
-  min-width: 900px;
+  min-width: 45em;
 }
 
 
 /* mini-classes */
 
 h1 {
-  font-size: 60px;
+  font-size: 3em;
 }
 
 h2 {
   color: #444;
-  font-size: 30px;
+  font-size: 1.5em;
   font-weight: normal;
 }
 
 h3 {
   color: #666;
-  font-size: 30px;
+  font-size: 1.5em;
   font-weight: normal;
 }
 
@@ -35,18 +35,18 @@ h3 {
 }
 
 .container {
-  width: 850px;
+  width: 42.5em;
   margin: 0 auto;
-  padding: 0 25px;
+  padding: 0 1.25em;
 }
 
 .tab {
   display: inline-block;
   width: 33%;
   z-index: -100;
-  margin-top: 30px;
+  margin-top: 1.5em;
   text-align: center;
-  border-radius: 10px 10px 0 0 !important;
+  border-radius: 0.5em 0.5em 0 0 !important;
   overflow: visible !important;
   cursor: pointer;
 }
@@ -63,34 +63,34 @@ h3 {
 /* element's style */
 
 .cover-photo {
-  height: 150px;
-  min-width: 850px;
+  height: 7.5em;
+  min-width: 42.5em;
   background-image: url("media/scc-banner.png");
   background-size: cover;
   background-position: center top;
 }
 
 .header, .header .img, .cards > div, .footer {
-  box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
-  border-radius: 5px;
+  box-shadow: 0 0.15em 0.4em rgba(0, 0, 0, .25);
+  border-radius: 0.25em;
 }
 
 .cards > div, .intro, .footer, .tab {
-  padding: 10px;
+  padding: 0.5em;
   color: #666;
-  font-size: 20px;
+  font-size: 1em;
   line-height: 1.33;
-  border-radius: 5px;
+  border-radius: 0.25em;
   background: white;
   overflow: auto;
 }
 
 .cards > div > img,
 .cards > div > .video {
-  max-width: 270px;
-  max-height: 180px;
-  border-radius: 5px;
-  background-size: 270px 180px;
+  max-width: 13.5em;
+  max-height: 9em;
+  border-radius: 0.25em;
+  background-size: 13.5em 9em;
   /* use flex to center play button */
   display: flex;
   justify-content: center;
@@ -98,8 +98,8 @@ h3 {
 }
 
 .icon {
-  max-height: 75px;
-  max-width: 75px;
+  max-height: 3.75em;
+  max-width: 3.75em;
 }
 
 
@@ -107,35 +107,35 @@ h3 {
 
 .header .img {
   float: left;
-  height: 90px;
-  margin-top: -90px;
-  margin-right: 5px;
-  margin-bottom: 120px;
-  border-radius: 5px 5px 0 0;
+  height: 4.5em;
+  margin-top: -4.5em;
+  margin-right: 0.25em;
+  margin-bottom: 6em;
+  border-radius: 0.25em 0.25em 0 0;
   background-color: white;
 }
 
 .header .img > div {
-  padding: 10px;
-  border-radius: 5px;
+  padding: 0.5em;
+  border-radius: 0.25em;
   background-color: white;
 }
 
 .header img {
-  height: 200px;
-  border-radius: 5px;
+  height: 10em;
+  border-radius: 0.25em;
 }
 
 .header .wrapper {
-  border-radius:0 5px 5px 5px;
-  margin-top: -35px;
+  border-radius:0 0.25em 0.25em 0.25em;
+  margin-top: -1.75em;
   background-color: white;
 }
 
 .name {
   display: table-cell;
   vertical-align: middle;
-  height: 130px;
+  height: 6.5em;
 }
 
 .intro {
@@ -146,19 +146,15 @@ h3 {
 
 /* cards style */
 
-.container.tabs {
-  font-size: 0;
-}
-
 .container.cards {
-  width: 850px;
-  padding: 25px;
-  border-radius: 5px;
+  width: 42.5em;
+  padding: 1.25em;
+  border-radius: 0.25em;
   background-color: #cdcdcd;
 }
 
 .cards > div {
-  margin-bottom: 30px;
+  margin-bottom: 1.5em;
 }
 
 .cards > div.last {
@@ -168,20 +164,20 @@ h3 {
 .cards > div > img,
 .cards > div > .video {
   float: right;
-  margin-left: 15px;
+  margin-left: 0.75em;
 }
 
 .cards > div h3 {
   display: inline-block;
-  margin-bottom: 5px;
+  margin-bottom: 0.25em;
 }
 
 
 /* footer style */
 
 .footer {
-  border-radius: 5px 5x 0 0;
-  margin-top: 30px;
+  border-radius: 0.25em 5x 0 0;
+  margin-top: 1.5em;
   text-align: center;
 }
 
