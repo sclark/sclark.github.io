@@ -1,0 +1,69 @@
+==================================================================
+https://keybase.io/sclark
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://sclark.io
+  * I am sclark (https://keybase.io/sclark) on keybase.
+  * I have a public key with fingerprint 107E 65B6 CCA5 C074 5721  EF34 CB6C BE57 3E7B ECAD
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "010170a5229591b1a4402ce2677e82bff2325cf04d4e164764e649263989f3fe71290a",
+            "fingerprint": "107e65b6cca5c0745721ef34cb6cbe573e7becad",
+            "host": "keybase.io",
+            "key_id": "cb6cbe573e7becad",
+            "kid": "010170a5229591b1a4402ce2677e82bff2325cf04d4e164764e649263989f3fe71290a",
+            "uid": "b4aca475ad41788b38d879c0b2ccc919",
+            "username": "sclark"
+        },
+        "service": {
+            "hostname": "sclark.io",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1469417134,
+    "expire_in": 157680000,
+    "prev": "3b8ee6f247ae672edb7f506d0af30f0a0d01dc7646b1b6b60fe719c47cc60089",
+    "seqno": 7,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.53
+Comment: https://keybase.io/crypto
+
+yMIeAnicrVJbbExBGN7WktoEFQ8iLpHTENGSObeZc5awSEjd0hJpCbYzc+ask65z
+1u7pajWNRKiWoh7oQyuRuAZbkbo8VNAqkXQfpCE8SJTwspW2rkmtYE7xIPFoXibz
+zfd98/1fpmfCGF8g53VpebZoQ3owp7freJWv7ER9e61AHKNGCNYKlWx0Y1GDJdxw
+pWUIQQGIQEQAq5Kkq7pIRKwoQKJMgggxTSKmKcmSSk2gGAoToYKgwqCiS1DWNd2U
+TYZESQdYKBJMy46weCxu2S63FQFiUCWQUqxSgBQVSSIzZYVyiDAVyQwRRrHBhTuc
+hKfg4QhOsIWWwzF+CI/G+wf/P+euGrUjCqZYQSo2FBFpGpE1Q0M6BUSilOqi7hET
+LG7jnYyzEzSK45VCXZHAsaRFmVerN8df979GicUd16FOlMM7XDcW9FRuTcyj7WYk
+/NsgTCzb4A1yQZLFE5ZjC0GRM6lreY6iAnUeTJSVIoFVx6w4C1seQ0VQA3x5z7Ak
+t5SJxhg0JQVhBpHEDIJMFUADYFMGJsDAAKJBeRuQiAQSCLwmdKogSiEAmjdngu2y
+HSGIeEwc8YaxIjZ2q+JMqOu+t9Xvywn4xo3N9X6WLzA+/89/+/Qxz3ej7FEo1XG/
+svNsg39ptu300/bUsR+HbsldhZubtxXndvYuWz4Hip3ZByu+P7/9+HXPpNTnkY6W
+2QXpM1dmTsk8Q0Mf3LfT0sWBPtIoLOoYPpCXFyq50JdZgyYO0rahs2+mds/aX9L+
+9Xp1VbS2o8VnH6lvfnu3+OaWuS9ubf/SPPnUxtLQzU1+Y7EmpxsrhHNXL1UQOzC3
+oP/Y+v6m7nXjIms/BFPzUjXqt/kz9ua25mcCTuPFfYUVqx8WPP7yskU7uGrMQJ9+
+vqF1ZOfR0B19+hZcM+PTfiFz9VnTgsPGq2vbTn7OXnvy9P2eYbt8INnvX9LbWprx
+LxmpW9kUeld9eUXkJ+5PReI=
+=+0mt
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/sclark
+
+==================================================================
+
