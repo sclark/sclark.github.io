@@ -22,9 +22,11 @@ layout: compress
             {% for item in site.data.experience %}
 
                 <div data-type="{{ item.category }}">
-                    <a href="{{ item.href }}">
-                      <img src="media/{{ item.img }}">
-                    </a>
+                    {% if item.img.size > 0 %}
+                        <a href="{{ item.href }}">
+                            <img src="media/{{ item.img }}">
+                        </a>
+                    {% endif %}
                     <a href="{{ item.href }}">
                         <h3>{{ item.title }}</h3>
                     </a>
