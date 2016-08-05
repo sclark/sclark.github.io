@@ -110,8 +110,6 @@ h3 {
   justify-content: space-between;
   border-radius: 0 0 0.25em 0.25em;
   color: #666;
-  opacity: 0.5;
-  transition: opacity 0.15s ease-in-out;
 }
 
 .social > * {
@@ -121,10 +119,6 @@ h3 {
 .social a {
   color: #666;
   cursor: pointer;
-}
-
-.social:hover {
-  opacity: 1;
 }
 
 .header {
@@ -219,13 +213,21 @@ h3 {
 
 .footer {
   border-radius: 0.25em 0.25em 0 0;
-  margin-top: 2em;
+  margin-top: 1.5em;
   text-align: center;
 }
 
 .footer a {
   text-decoration: underline;
   color: inherit;
+}
+
+
+.footer.social {
+  float: none;
+  justify-content: space-around;
+  margin-bottom: 0;
+  font-size: 1.33em;
 }
 
 
@@ -248,10 +250,8 @@ h3 {
   .social {
     float: none;
     justify-content: space-around;
-    opacity: 1;
     margin-bottom: 1em;
     font-size: 1.33em;
-    transition: none;
   }
 
   .cards > div h3 {
