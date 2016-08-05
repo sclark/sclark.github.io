@@ -1,0 +1,295 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #dee1ec;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 20px;
+  max-width: 45em;
+  margin: 0 auto;
+}
+
+
+/* mini-classes */
+
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  color: #444;
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+h3 {
+  color: #666;
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+.active {
+  background: #bfc3d2 !important;
+}
+
+.container {
+  max-width: 42.5em;
+  margin: 0 auto;
+  padding: 0 1.25em;
+}
+
+.tabs {
+  display: flex;
+  margin-top: 2em;
+  align-items: center;
+}
+
+.tab {
+  border-radius: 0.5em 0.5em 0 0 !important;
+  cursor: pointer;
+  flex-grow: 1;
+    flex-basis: 0;
+  text-align: center;
+}
+
+.tab.middle {
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+}
+
+.tab[data-href]:hover:after {
+  content: "\2913";
+}
+
+/* element's style */
+
+.header, .header .img, .cards > div, .footer, .social {
+  box-shadow: 0 0.15em 0.4em rgba(0, 0, 0, .25);
+  border-radius: 0.25em;
+}
+
+.cards > div, .intro, .footer, .tab, .social {
+  padding: 0.5em;
+  color: #666;
+  font-size: 1em;
+  line-height: 1.33;
+  border-radius: 0.25em;
+  background: white;
+  overflow: auto;
+}
+
+.cards > div img,
+.cards > div .video {
+  max-width: 13.5em;
+  max-height: 9em;
+  border-radius: 0.25em;
+  background-size: 13.5em 9em;
+  display: block;
+}
+
+.icon {
+  max-height: 3.75em;
+  max-width: 3.75em;
+}
+
+
+/* header style */
+
+.social {
+  height: 2em;
+  overflow: hidden;
+  float: right;
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  justify-content: space-between;
+  border-radius: 0 0 0.25em 0.25em;
+  color: #666;
+  opacity: 0.5;
+  transition: opacity 0.15s ease-in-out;
+}
+
+.social > * {
+  padding: 0 0.33em;
+}
+
+.social a {
+  color: #666;
+  cursor: pointer;
+}
+
+.social:hover {
+  opacity: 1;
+}
+
+.header {
+  margin-top: 4.25em;
+}
+
+.header .img {
+  float: left;
+  height: 4.5em;
+  margin-top: -4.5em;
+  margin-right: 0.25em;
+  margin-bottom: 6em;
+  border-radius: 0.25em 0.25em 0 0;
+  background-color: white;
+}
+
+.header .img > div {
+  padding: 0.5em;
+  border-radius: 0.25em;
+  background-color: white;
+}
+
+.header img {
+  height: 10em;
+  border-radius: 0.25em;
+}
+
+.header .wrapper {
+  border-radius: 0.25em;
+  background-color: white;
+}
+
+.name {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 6.5em;
+}
+
+.name h1,
+.name h2 {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.intro {
+  clear: both;
+  padding-top: 0 !important;
+}
+
+
+/* cards style */
+
+.tab {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.container.cards {
+  max-width: 42.5em;
+  padding: 1.25em 1.25em 0 1.25em;
+  overflow: auto;
+  border-radius: 0.25em;
+  background-color: #cdcdcd;
+}
+
+.cards > div {
+  margin-bottom: 1.5em;
+}
+
+.cards > div.last {
+  margin-bottom: 0 !important;
+}
+
+.cards > div img,
+.cards > div .video {
+  float: right;
+  margin-left: 0.75em;
+}
+
+.cards > div h3 {
+  display: inline-block;
+  margin-bottom: 0.25em;
+}
+
+
+/* footer style */
+
+.footer {
+  border-radius: 0.25em 0.25em 0 0;
+  margin-top: 2em;
+  text-align: center;
+}
+
+.footer a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+
+/* default starting style */
+
+.cards > div {
+  display: none;
+}
+
+.cards > div[data-type="projects"] {
+  display: block;
+}
+
+@media screen and (max-width: 700px) {
+
+  h1, h2, h3 {
+    text-align: center;
+  }
+
+  .social {
+    float: none;
+    justify-content: space-around;
+    opacity: 1;
+    margin-bottom: 1em;
+    font-size: 1.33em;
+    transition: none;
+  }
+
+  .cards > div h3 {
+    margin-top: 0.25em;
+  }
+
+  .cards > div img, .cards > div > .video {
+    overflow-x: hidden;
+    margin: 0 auto;
+    float: none;
+  }
+
+  .header .img {
+    float: none;
+    display: inline-block;
+    margin: 0 auto;
+    margin-bottom: 6em;
+    margin-top: -4.5em;
+  }
+
+  .header .wrapper {
+    padding-top: 5.75em;
+    margin-top: -6.2em;
+  }
+
+  .header, .header .img, .cards > div, .footer {
+    text-align: center;
+  }
+
+  .name {
+    height: auto;
+    padding: 0.5em;
+    align-items: center;
+  }
+
+  .name h1,
+  .name h2 {
+    white-space: normal;
+    text-overflow: initial;
+  }
+
+}
