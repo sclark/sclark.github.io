@@ -1,4 +1,5 @@
-icon,href
-envelope,mailto:hello@sclark.io?subject=I saw your awesome website
-linkedin,http://linkedin.com/in/sclarkio
-github,http://github.com/sclark
+icon,text,href
+earth,sclark.io,http://sclark.io
+github,github/sclark,http://github.com/sclark
+linkedin,linkedin/sclarkio,http://linkedin.com/in/sclarkio
+envelope,hello@sclark.io,mailto:hello@sclark.io?subject=I saw your awesome website

@@ -1,0 +1,15 @@
+<!-- This blog is Copyright Stephen Clark, {{ site.time | date: '%Y' }}.  -->
+<!doctype html>
+<html>
+    <head>
+    <title>{{ site.blog-title }}</title>
+    <style>{% include blog-style.css %}</style>
+        {% include head.html %}
+    </head>
+    <body>
+        {% include blog-header.html %}
+        <div class="articles">
+            {{ content }}
+        </div>
+    </body>
+</html>

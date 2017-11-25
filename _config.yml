@@ -1,14 +1,15 @@
 # Site settings
+
 author: Stephen Clark
 email: hello@sclark.io
-promo: Student at Carnegie Mellon University
-gravatar: "https://www.gravatar.com/avatar/c9d64ed5cecf02286326b6932778adeb?s=250"
 keywords: "Stephen Clark, sclark, sclarkio, developer, cmu, Carnegie Mellon, San Diego, La Jolla, MoneyThink, spring carnival"
+
+title: Stephen Clark
+gravatar: "https://www.gravatar.com/avatar/c9d64ed5cecf02286326b6932778adeb?s=250"
+promo: Student at Carnegie Mellon University
 intro: >
   I'm a motivated Computer Science student looking to leverage my skills learned through previous internship experiences as they apply to impactful future opportunities.
 
-compress_html:
-  clippings: all
-  endings: all
-
-plugins_dir: _plugins
+blog-title: Stephen Rambles
+blog-desc: >
+  Every now and then, I stumble on cool stuff, so I stick it up here.

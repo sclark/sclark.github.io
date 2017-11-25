@@ -1,40 +1,31 @@
 ---
-layout: compress
+layout: default
 ---
 
-<!-- This webiste is Copyright Stephen Clark, {{ site.time | date: '%Y' }}.  -->
-<!doctype html>
-<html>
-    <head>
-        {% include head.html %}
-    </head>
-    <body>
-        {% include header.html %}
+{% include header.html %}
 
-        <div class="container tabs">
-          <div class="tab active" id="default">Projects</div>
-          <div class="tab middle">Experience</div>
-          <div class="tab" data-href="sclark.pdf">Resume</div>
+<div class="container tabs">
+  <div class="tab active" id="default">Projects</div>
+  <div class="tab middle">Experience</div>
+  <div class="tab" data-href="sclark.pdf">Resume</div>
+</div>
+
+<div class="container cards active">
+    {% for item in site.data.experience %}
+
+        <div data-type="{{ item.category }}">
+            {% if item.img.size > 0 %}
+                <a href="{{ item.href }}" target="_blank">
+                    <img src="media/{{ item.img }}">
+                </a>
+            {% endif %}
+            <a href="{{ item.href }}" target="_blank">
+                <h3>{{ item.title }}</h3>
+            </a>
+            <p>{{ item.info }}</p>
         </div>
 
-        <div class="container cards active">
-            {% for item in site.data.experience %}
+    {% endfor %}
+</div>
 
-                <div data-type="{{ item.category }}">
-                    {% if item.img.size > 0 %}
-                        <a href="{{ item.href }}" target="_blank">
-                            <img src="media/{{ item.img }}">
-                        </a>
-                    {% endif %}
-                    <a href="{{ item.href }}" target="_blank">
-                        <h3>{{ item.title }}</h3>
-                    </a>
-                    <p>{{ item.info }}</p>
-                </div>
-
-            {% endfor %}
-        </div>
-
-        {% include footer.html %}
-    </body>
-</html>
+{% include footer.html %}
