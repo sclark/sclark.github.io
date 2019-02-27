@@ -61,7 +61,7 @@ h3 {
   margin-right: 1%;
 }
 
-.tab[data-href]:hover:after {
+.tab[data-href]:after {
   margin-left: 0.15em;
   content: "\2913";
 }
