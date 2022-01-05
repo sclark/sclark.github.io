@@ -11,6 +11,8 @@ body {
   background-color: #fff;
   margin: 30px;
   padding: 30px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 0px 0px #ccd0dc;
 }
 
 #header {
@@ -22,6 +24,7 @@ body {
 #header img {
   width: 200px;
   height: 200px;
+  border-radius: 10px;
 }
 
 #header h1 {
