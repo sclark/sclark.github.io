@@ -1,31 +1,33 @@
----
-layout: default
----
-
-{% include header.html %}
-
-<div class="container tabs">
-  <div class="tab active" id="default">Projects</div>
-  <div class="tab middle">Experience</div>
-  <div class="tab" data-href="https://drive.google.com/open?id=1vPktALVmc-oDXnZjH88s3v2LB0yAHeNv">Resume</div>
-</div>
-
-<div class="container cards active">
-    {% for item in site.data.experience %}
-
-        <div data-type="{{ item.category }}">
-            {% if item.img.size > 0 %}
-                <a href="{{ item.href }}" target="_blank">
-                    <img src="media/{{ item.img }}">
-                </a>
-            {% endif %}
-            <a href="{{ item.href }}" target="_blank">
-                <h3>{{ item.title }}</h3>
-            </a>
-            <p>{{ item.info }}</p>
-        </div>
-
-    {% endfor %}
-</div>
-
-{% include footer.html %}
+<html>
+  <head>
+    <title>Stephen Clark</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102652042-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'UA-102652042-1');
+    </script>
+  </head>
+  <body>
+    <div id="header">
+      <img src="https://www.gravatar.com/avatar/c9d64ed5cecf02286326b6932778adeb?s=200">
+      <div id="header-content">
+        <h1>Stephen Clark</h1>
+        <h2>Building planet scale Video Infrastructure at YouTube</h2>
+      </div>
+    </div>
+    <div id="content">
+      <p>I love designing and building distributed systems, with a focus on solving problems involving:</p>
+      <ul>
+        <li>Resource efficency at scale,</li>
+        <li>Scheduling with low latency, and</li>
+        <li>Feedback control systems.</li>
+      </ul>
+      <p>Besides engineering, I serve on a Google Hiring Committee.</p>
+      <p>Connect with me on <a href="http://linkedin.com/in/sclarkio">LinkedIn</a> or <a href="http://github.com/sclark">GitHub</a>.
+    </div>
+  </body>
+</html>
