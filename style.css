@@ -4,16 +4,16 @@ body {
   background-color: #eeeff5;
   color: #1e1e1e;
   max-width: 1000px;
-  margin: 40px auto;
+  margin: 50px auto;
 }
 
 #header, #content {
   background-color: #fff;
   margin: 30px;
   padding: 30px;
-  border: 1px solid #ccd0dc;
+  border: 3px solid #ccd0dc;
   border-radius: 10px;
-  box-shadow: 10px 10px 0px 0px #ccd0dc;
+  box-shadow: 15px 15px 0px 0px #ccd0dc;
 }
 
 #header {
@@ -32,7 +32,7 @@ body {
   margin-top: 0;
 }
 
-#header h2 {
+#header h3 {
   margin-bottom: 0;
 }
 
