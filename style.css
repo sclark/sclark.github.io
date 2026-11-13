@@ -1,11 +1,20 @@
+/* Base */
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
+  line-height: 1.5;
   background-color: #eeeff5;
   color: #1e1e1e;
   max-width: 1000px;
   margin: 50px auto;
 }
+
+/* Cards */
 
 #header, #content {
   background-color: #fff;
@@ -16,6 +25,8 @@ body {
   box-shadow: 15px 15px 0px 0px #ccd0dc;
 }
 
+/* Header */
+
 #header {
   display: flex;
   flex-direction: row;
@@ -23,9 +34,19 @@ body {
 }
 
 #header img {
+  flex-shrink: 0;
   width: 200px;
   height: 200px;
+  object-fit: cover;
   border-radius: 10px;
+}
+
+#header-content {
+  margin: auto 0;
+}
+
+#header h1, #header h3 {
+  line-height: 1.25;
 }
 
 #header h1 {
@@ -36,9 +57,7 @@ body {
   margin-bottom: 0;
 }
 
-#header-content {
-  margin: auto 0;
-}
+/* Content */
 
 #content p:first-child {
   margin-top: 0;
@@ -46,4 +65,56 @@ body {
 
 #content p:last-child {
   margin-bottom: 0;
+}
+
+/* Mobile */
+
+@media (max-width: 640px) {
+  body {
+    font-size: 17px;
+    margin: 0 auto;
+    padding:
+      max(16px, env(safe-area-inset-top))
+      max(16px, env(safe-area-inset-right))
+      max(24px, env(safe-area-inset-bottom))
+      max(16px, env(safe-area-inset-left));
+  }
+
+  #header, #content {
+    margin: 0 8px 24px 0;
+    padding: 20px;
+    border-width: 2px;
+    box-shadow: 8px 8px 0px 0px #ccd0dc;
+  }
+
+  #header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 16px;
+  }
+
+  #header img {
+    width: 140px;
+    height: 140px;
+  }
+
+  #header h1 {
+    font-size: 1.75em;
+    margin-bottom: 8px;
+  }
+
+  #header h3 {
+    font-size: 1.05em;
+    font-weight: normal;
+    color: #4a4a4a;
+  }
+
+  #content ul {
+    padding-left: 1.25em;
+  }
+
+  #content a {
+    padding: 4px 0;
+  }
 }
