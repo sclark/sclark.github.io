@@ -26,11 +26,14 @@
   </div>
 
   <div id="header">
-    <img src="https://www.gravatar.com/avatar/c9d64ed5cecf02286326b6932778adeb?s=400" alt="Stephen Clark">
+    <div id="avatar">
+      <img src="https://www.gravatar.com/avatar/e554ec66fb441a8a0f1e4f9bafb962eb11afa41418caee23264ee53e82b1f4e4?s=400" alt="Stephen Clark">
+      <img id="avatar-lego" src="https://www.gravatar.com/avatar/8bab66054683febe2c90d4b170277d5d188065f49fff810cef7b6862ac8845d8?s=400" alt="" aria-hidden="true">
+    </div>
     <div id="header-content">
       <h1>Stephen Clark</h1>
       <p class="tagline">Senior Software Engineer at Google</p>
-      <p class="tagline tagline-secondary">LEGO Enthusiast</p>
+      <p class="tagline tagline-secondary"><span id="lego-trigger">LEGO Enthusiast</span></p>
     </div>
   </div>
 
@@ -45,6 +48,41 @@
     <p>Connect with me on <a href="http://linkedin.com/in/sclarkio">LinkedIn</a>, <a
         href="http://github.com/sclark">GitHub</a>, or <a href="https://instagram.com/1radboy">Instagram</a>.</p>
   </div>
+
+  <script>
+    // Hovering "LEGO Enthusiast" crossfades to the LEGO avatar. Touch has no
+    // hover, so a tap shows it for 5s instead (re-tapping restarts the timer).
+    (function () {
+      var avatar = document.getElementById('avatar');
+      var trigger = document.getElementById('lego-trigger');
+      var timer;
+
+      function showLego(on) {
+        avatar.classList.toggle('lego', on);
+      }
+
+      trigger.addEventListener('pointerenter', function (e) {
+        if (e.pointerType === 'mouse') {
+          showLego(true);
+        }
+      });
+      trigger.addEventListener('pointerleave', function (e) {
+        if (e.pointerType === 'mouse') {
+          showLego(false);
+        }
+      });
+      trigger.addEventListener('pointerup', function (e) {
+        if (e.pointerType === 'mouse') {
+          return;
+        }
+        showLego(true);
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+          showLego(false);
+        }, 5000);
+      });
+    })();
+  </script>
 
   <script>
     // Other sites redirect here with ?error=<code> to show a message.
